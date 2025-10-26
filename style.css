@@ -1,54 +1,51 @@
 @font-face {
   font-family: 'ODYWSS';
   src: url('ODYWSS.otf') format('opentype');
-  font-display: swap;
 }
 
 body {
   margin: 0;
   padding: 0;
-  height: 100vh;
-  background: url('fondo.jpg') no-repeat center center/cover;
-  color: white;
   font-family: 'ODYWSS', sans-serif;
+  background: url('fondo.jpg') no-repeat center center fixed;
+  background-size: cover;
+  color: white;
+  text-align: center;
+  height: 100vh;
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
-.overlay {
-  text-align: center;
-  background: rgba(0, 0, 0, 0.6);
-  padding: 50px;
-  border-radius: 20px;
+.container {
+  background-color: rgba(0, 0, 0, 0.5);
+  padding: 40px;
+  border-radius: 10px;
 }
 
 h1 {
-  font-size: 5rem;
+  font-size: 3em;
   margin-bottom: 20px;
-  letter-spacing: 4px;
-  text-shadow: 0 0 20px black;
 }
 
 #countdown {
-  display: flex;
-  justify-content: center;
-  gap: 25px;
+  font-size: 2.5em;
+  margin-bottom: 30px;
 }
 
-#countdown div {
-  text-align: center;
+.mensaje {
+  font-size: 1.2em;
+  margin-bottom: 15px;
 }
 
-#countdown span {
-  font-size: 3rem;
-  display: block;
-  text-shadow: 0 0 15px black;
+.instagram-btn img {
+  width: 200px;
+  height: auto;
+  border-radius: 8px;
+  transition: transform 0.3s ease, opacity 0.3s ease;
 }
 
-#countdown p {
-  font-size: 1rem;
-  margin-top: 5px;
-  color: #ccc;
-  letter-spacing: 2px;
+.instagram-btn img:hover {
+  transform: scale(1.05);
+  opacity: 0.9;
 }
