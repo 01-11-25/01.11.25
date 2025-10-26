@@ -1,45 +1,43 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>01/11</title>
-  <link rel="stylesheet" href="style.css" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cuenta regresiva</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <div class="overlay">
-    <h1>01/11</h1>
-    <div id="countdown">
-      <div><span id="days">00</span><p>DÍAS</p></div>
-      <div><span id="hours">00</span><p>HORAS</p></div>
-      <div><span id="minutes">00</span><p>MIN</p></div>
-      <div><span id="seconds">00</span><p>SEG</p></div>
-    </div>
+  <div class="container">
+    <h1>Falta poco...</h1>
+    <div id="countdown"></div>
+    <p class="mensaje">Para más info, seguinos en Instagram</p>
+
+    <a href="https://instagram.com" target="_blank" class="instagram-btn">
+      <img src="botonig.jpg" alt="Instagram">
+    </a>
   </div>
 
   <script>
-    // Fecha objetivo: 1 de noviembre de 2025 a las 00:00
-    const targetDate = new Date("Nov 1, 2025 00:00:00").getTime();
+    const countDownDate = new Date("Nov 1, 2025 00:00:00").getTime();
+    const countdown = document.getElementById("countdown");
 
-    const countdown = setInterval(() => {
+    const x = setInterval(function() {
       const now = new Date().getTime();
-      const distance = targetDate - now;
+      const distance = countDownDate - now;
 
       const days = Math.floor(distance / (1000 * 60 * 60 * 24));
       const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
       const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
       const seconds = Math.floor((distance % (1000 * 60)) / 1000);
 
-      document.getElementById("days").innerText = days.toString().padStart(2, '0');
-      document.getElementById("hours").innerText = hours.toString().padStart(2, '0');
-      document.getElementById("minutes").innerText = minutes.toString().padStart(2, '0');
-      document.getElementById("seconds").innerText = seconds.toString().padStart(2, '0');
+      countdown.innerHTML = `${days}d ${hours}h ${minutes}m ${seconds}s`;
 
       if (distance < 0) {
-        clearInterval(countdown);
-        window.location.href = "...";
+        clearInterval(x);
+        window.location.href = "https://youtube.com";
       }
     }, 1000);
   </script>
 </body>
 </html>
+
