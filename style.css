@@ -1,6 +1,6 @@
 @font-face {
   font-family: 'ODYWSS';
-  src: url('./ODYWSS.ttf') format('truetype'),
+  src: url('./ODYWSS.otf') format('opentype'),
        url('./ODYWSS.woff2') format('woff2'),
        url('./ODYWSS.woff') format('woff');
   font-display: swap;
@@ -54,3 +54,4 @@ h1 {
   color: #ccc;
   letter-spacing: 2px;
 }
+
